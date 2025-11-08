@@ -16,7 +16,7 @@ Education
 
 Work experience
 ======
-* Jul 2022 - Present: Distributed Storage Engineer
+* Jun 2024 - Present: Distributed Storage Engineer
   * JD.com, Beijing, China
   * Team: Core Storage Platform Department
   * Duties included:
@@ -84,4 +84,3 @@ Additional Information
 * Location: Beijing, China
 * Email: trueno_cb@163.com
 * GitHub: github.com/TruenoCB
-* Phone: +86 19955953625
