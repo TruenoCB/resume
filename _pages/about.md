@@ -57,7 +57,5 @@ Responsible for designing and optimizing JD's flagship distributed storage platf
 - Email: [trueno_cb@163.com](mailto:trueno_cb@163.com)
 - GitHub: [github.com/TruenoCB](https://github.com/TruenoCB)
 - Technical Blog: [trueno.cloud](https://www.trueno.cloud)
-- Phone: +86 19955953625
 - Location: Beijing, China
 
-[Download Full Resume (PDF)](https://TruenoCB.github.io/assets/CaiBo-Resume.pdf)
