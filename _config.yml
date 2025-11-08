@@ -26,9 +26,10 @@ author:
   avatar           : "profile.png"
   name             : "Trueno CB"
   pronouns         : # example: "she/her"  
-  bio              : "Infinite Progress \n  - a programmer specialized in distributed storage"
+  bio              : "Infinite Progress 
+    - a programmer specialized in distributed storage"
   location         : "BeiJing"
-  employer         : "JD"
+  employer         : "JD.com"
   uri              : # URL
   email            : "trueno_cb@163.com" 
 
