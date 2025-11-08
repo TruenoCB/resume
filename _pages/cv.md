@@ -12,7 +12,7 @@ redirect_from:
 Education
 ======
 * M.S. in Software Engineering, Dalian University of Technology (DUT), 2024 (expected)
-* B.S. in E-Commerce, Dalian Maritime University (DMU), 2021
+* B.S. in Dalian Maritime University (DMU), 2021
 
 Work experience
 ======
