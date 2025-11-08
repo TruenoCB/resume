@@ -21,7 +21,7 @@ Results-driven Distributed Storage Engineer with **2+ years of hands-on experien
 - **Foundations**: TCP/IP Protocol, Concurrency Control (GMP/Threads), Data Structures & Algorithms, Performance Tuning
 
 ### Professional Experience
-#### Distributed Storage Engineer | JD.com (Jul 2022 - Present)
+#### Distributed Storage Engineer | JD.com (Jul 2024 - Present)
 **Team**: Core Storage Platform Department  
 Responsible for designing and optimizing JD's flagship distributed storage platform, supporting object storage and image storage services that power JD's e-commerce, logistics, and marketing ecosystems (serving 100M+ daily active users).
 
@@ -32,97 +32,20 @@ Responsible for designing and optimizing JD's flagship distributed storage platf
 - Built end-to-end monitoring and alerting systems with Prometheus and Grafana, enabling real-time fault detection and reducing mean time to resolve (MTTR) by 50%.
 - Implemented tiered storage strategy (hot data in SSD, cold data in HDD) and intelligent prefetching algorithms, reducing overall storage costs by 15% while maintaining SLA commitments.
 
-### Key Projects
-#### 1. GoFlow Async Task Processing Framework (Mar 2023 - Jul 2023)
-- **Role**: Architecture Design & Core Development (Personal Project)
-- **Objective**: Build a high-performance asynchronous task framework tailored for distributed storage scenarios (e.g., data backup, migration, and consistency checks).
-- **Achievements**:
-  - Designed a scalable two-tier architecture (flowsvr for task scheduling, worker for task execution) supporting horizontal scaling to 100+ nodes.
-  - Optimized throughput from 500 QPS to 2000 QPS via MySQL connection pool tuning, Redis caching, and lock contention reduction.
-  - Replaced MySQL row-level locks with Redis distributed locks, resolving multi-machine competition issues and reducing CPU usage by 35%.
-  - Implemented dynamic task priority adjustment based on storage cluster load, ensuring critical tasks (e.g., disaster recovery) are prioritized.
-- **Tech Stack**: Golang, MySQL, Redis, Protobuf, Docker, Gin
+#### Backend Development Intern | Kuaishou (Jul 2023 - 2024)
+**Team**: Cloud-Native Application - Basic Platform Department  
+Focused on cloud-native platform development and observability solution building, enhancing system visibility, scalability, and operational efficiency for Kuaishou's core infrastructure.
 
-#### 2. Distributed Cache System & Web Framework (Dec 2022 - Feb 2023)
-- **Role**: Independent Development (Personal Project)
-- **Objective**: Develop a high-availability distributed cache system integrated with a lightweight web framework for storage service APIs.
-- **Achievements**:
-  - Implemented LRU cache algorithm with read-write locks for concurrency control, supporting 100K+ QPS per node.
-  - Built service discovery and fault tolerance based on Etcd and Raft-like protocol, ensuring 99.9% cache cluster availability.
-  - Applied consistency hash algorithm for uniform data distribution, enabling horizontal scaling without data migration.
-  - Web framework supports dynamic routing, middleware (auth/monitoring), and context management for RESTful API development.
-- **Tech Stack**: Golang, Etcd, Protobuf, LRU, Consistency Hash, Gin
+- Designed and developed a **unified log monitoring SDK** to standardize observability practices across server and client-side systems, integrating logging, monitoring, and distributed tracing into a single workflow.
+- Built a pluggable architecture (via plugin factory pattern) enabling non-intrusive extension of observability capabilities, with seamless integration of local and remote configuration management.
+- Integrated **OpenTelemetry** for end-to-end distributed tracing, implementing trace ID generation and flexible exporter components to connect tracing data with logging/monitoring pipelines.
+- Developed custom plugins (including internal framework adapters and Prometheus exporters) to enable business-specific metrics collection, alerting, and visualization.
+- Optimized cloud-native platform performance by introducing multi-level caching and message queues, reducing database load by 40% for change management modules.
+- Designed Elasticsearch indexes and data retrieval scripts for deployment metrics, improving query performance by 35% and enabling efficient platform observability.
+- Implemented refined resource management and approval workflows, reducing production environment resource consumption by 25% through intelligent allocation.
 
 ### Contact & Portfolio
 - Email: [trueno_cb@163.com](mailto:trueno_cb@163.com)
 - GitHub: [github.com/TruenoCB](https://github.com/TruenoCB)
-- Technical Blog: [trueno.cloud](https://www.trueno.cloud)
 - Location: Beijing, China
 
-
-
-### Key Projects
-
-#### 1. GoFlow Async Task Processing Framework
-**Duration**: Mar 2023 - Jul 2023  
-**Role**: Architecture Design & Core Development (Personal Project)  
-**Tech Stack**: Golang, MySQL, Redis, Protobuf, Docker, Kubernetes, Gin  
-
-##### Project Overview
-A high-performance asynchronous task processing framework designed specifically for distributed storage scenarios (e.g., data backup, migration, consistency checks, and batch processing). The framework enables developers to build scalable, fault-tolerant task workflows with minimal code.
-
-##### Core Features
-- **Scalable Architecture**: Two-tier design (flowsvr for task scheduling, worker for execution) supporting horizontal scaling to 100+ nodes.
-- **Performance Optimization**:
-  - Tuned MySQL connection pool (max connections, idle timeout) to handle high concurrent task metadata operations.
-  - Implemented Redis caching for frequently accessed task data, reducing database load by 60%.
-  - Reduced lock contention via fine-grained locking strategies, improving throughput from 500 QPS to 2000 QPS.
-- **Distributed Coordination**:
-  - Replaced MySQL row-level locks with Redis distributed locks to resolve multi-machine competition, reducing CPU usage by 35%.
-  - Supported task sharding across workers to ensure load balancing.
-- **Task Management**:
-  - Dynamic priority adjustment based on storage cluster load (critical tasks like disaster recovery are prioritized).
-  - Automatic retry with exponential backoff for failed tasks.
-  - Dead-letter queue for tasks that fail after maximum retries, enabling manual intervention.
-- **Deployment**: Containerized with Docker, deployable on Kubernetes with Helm charts for easy scaling.
-
-##### Use Cases
-- Distributed data backup and migration for object storage clusters.
-- Batch processing of image metadata (resizing, format conversion, tagging).
-- Consistency checks across distributed storage nodes.
-
-#### 2. Distributed Cache System & Web Framework
-**Duration**: Dec 2022 - Feb 2023  
-**Role**: Independent Development (Personal Project)  
-**Tech Stack**: Golang, Etcd, Protobuf, LRU, Consistency Hash, Gin  
-
-##### Project Overview
-A dual-purpose system combining a high-availability distributed cache and a lightweight web framework, designed to accelerate data access for distributed storage services. The cache system provides low-latency data access, while the web framework simplifies API development for storage operations.
-
-##### Cache System Features
-- **High Performance**:
-  - Implemented LRU (Least Recently Used) eviction policy with configurable cache size.
-  - Used read-write locks for concurrency control, with fine-grained locking to maximize throughput (100K+ QPS per node).
-  - Supported cache expiration and automatic cleanup of stale keys.
-- **Consistency & Reliability**:
-  - Implemented SingleFlight mechanism to prevent cache breakdown (thundering herd problem).
-  - Used Protobuf for efficient data serialization/deserialization between cache nodes.
-  - Supported master-slave replication for data redundancy and fault tolerance.
-- **Scalability**:
-  - Applied consistency hash algorithm for uniform data distribution across nodes.
-  - Supported horizontal scaling without data migration (new nodes automatically take over a portion of the hash ring).
-- **Service Discovery & Fault Tolerance**:
-  - Integrated Etcd for dynamic service registration and discovery.
-  - Implemented health checks (heartbeat mechanism) between nodes to detect failures.
-  - Designed fault recovery based on Raft-like term election, ensuring 99.9% cluster availability.
-
-##### Web Framework Features
-- **Dynamic Routing**: Supported prefix-based routing and route grouping for API versioning.
-- **Middleware Support**: Built-in middleware for authentication, logging, rate limiting, and error recovery.
-- **Context Management**: Unified context object for request/response tracking, parameter injection, and goroutine management.
-- **Performance Optimization**: Context pool to reduce memory allocation overhead, improving API response time by 20%.
-
-##### Use Cases
-- Caching hot image metadata for object storage services.
-- Accelerating frequently accessed storage configuration data.
-- Building RESTful APIs for storage cluster management (node status, data usage, scaling).

@@ -1,12 +1,39 @@
 ---
-permalink: /projects/
-title: "Project Experience"
-author_profile: true
+title: "Projects During Internship"
+collection: publications
+category: conferences
+permalink: /publication/2024-02-17-internship-projects
+excerpt: 'Description of key projects completed during the internship, including technical implementations and business impacts.'
+date: 2024-02-17
+venue: 'Internship Experience'
 ---
 
 ## Key Projects
 
-### 1. GoFlow Async Task Processing Framework
+### 1. Unified Log Monitoring SDK Development & Extension
+**Duration**: Jul 2023 - Present  
+**Role**: Core Developer (Internship Project)  
+**Tech Stack**: Golang, Gin, OpenTelemetry, Prometheus, Protobuf, Docker, Redis  
+**Department**: Kuaishou - Cloud-Native Application - Basic Platform Department  
+
+#### Project Overview
+Addressed the inefficiency of fragmented logging and monitoring tools within the team by developing a unified, extensible observability SDK. The solution standardized data collection across server and client-side systems, integrating end-to-end logging, monitoring, and distributed tracing to enhance system visibility.
+
+#### Core Features & Implementations
+- **Unified Data Pipeline**: Integrated diverse log sources, standardized reporting methods for remote and local logs, and designed a complete monitoring chain from data source to sink, supporting multiple monitoring strategies.
+- **Pluggable Architecture**: Built a plugin factory pattern enabling non-intrusive registration of custom plugins, with seamless integration of local and remote configuration management for flexible extensions.
+- **Self-Developed HTTP Client**: Implemented core features including retry mechanisms, unified context parameter injection, automatic parsing, chain calls, codecs, and authentication, with rich hooks and global middleware for extensibility.
+- **Distributed Tracing Integration**: Integrated OpenTelemetry to build the exporter component, including trace ID generation and flexible data export to SDK sinks, enabling end-to-end observability.
+- **Business-Specific Plugins**: Designed and implemented internal framework adapters and Prometheus exporters, combining business buried points to enable real-time monitoring, alerting, and visualization.
+
+#### Achievements
+- Unified logging and monitoring practices across teams, reducing tool learning costs by 40% and improving operational efficiency.
+- Enabled non-intrusive extensibility for the SDK, supporting 10+ custom plugins without modifying core code.
+- Built a complete observability chain (logging + monitoring + tracing), reducing mean time to detect (MTTD) for production issues by 35%.
+- The self-developed HTTP client improved request success rate by 25% through intelligent retry and fault tolerance mechanisms.
+
+
+### 2. GoFlow Async Task Processing Framework
 **Duration**: Mar 2023 - Jul 2023  
 **Role**: Architecture Design & Core Development (Personal Project)  
 **Tech Stack**: Golang, MySQL, Redis, Protobuf, Docker, Kubernetes, Gin  
@@ -34,7 +61,7 @@ A high-performance asynchronous task processing framework designed specifically 
 - Batch processing of image metadata (resizing, format conversion, tagging).
 - Consistency checks across distributed storage nodes.
 
-### 2. Distributed Cache System & Web Framework
+### 3. Distributed Cache System & Web Framework
 **Duration**: Dec 2022 - Feb 2023  
 **Role**: Independent Development (Personal Project)  
 **Tech Stack**: Golang, Etcd, Protobuf, LRU, Consistency Hash, Gin  
